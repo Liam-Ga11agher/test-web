@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bramble &amp; Co. — Book an appointment</title>
+<meta name="description" content="A front-end demo booking app: pick a service, pick a slot, sign in to manage your appointments, or sign in as admin to see the studio's full schedule." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232F6F5E'/%3E%3Cpath d='M9 13h14M9 19h14' stroke='%23FFFFFF' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#/book">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">Bramble<span class="brand-amp">&amp;</span>Co.</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#/book" class="nav-link" data-route="/book">Book</a>
+        <a href="#/account" class="nav-link" data-route="/account">My bookings</a>
+        <a href="#/admin" class="nav-link nav-admin-link is-hidden" data-route="/admin">Dashboard</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+          <span class="theme-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div id="auth-slot" class="auth-slot"></div>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" class="app"></main>
+
+  <footer class="site-footer">
+    <p>Bramble &amp; Co. is a demo studio. This entire site runs in your browser — no server, no real accounts. Data lives in this browser's local storage.</p>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
